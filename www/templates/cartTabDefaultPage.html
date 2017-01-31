@@ -1,55 +1,24 @@
 <ion-view title="Cart Tab Default Page" id="page3">
-  <ion-content padding="true" class="has-header">
-    <div class="list card" id="cartTabDefaultPage-card21">
-      <div class=" item item-image">
-        <img src="img/nemtaoprimos-livro.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
-      </div>
-      <div class="item item-body" id="cartTabDefaultPage-list-item-container2">
-        <h1 id="cartTabDefaultPage-heading1" style="color:#000000;text-align:center;">Heading</h1>
-        <div id="cartTabDefaultPage-markdown5" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;">Autor: Charles França</p>
+    <ion-content padding="true" class="has-header">
+
+        <!--A variavel da direita "livros" é uma variavel existente no controller e que foi repassada ao html pelo escopo da página "$scope"-->
+        <div class="list card" id="cartTabDefaultPage-card21" ng-repeat="livro in livros">
+            <div class=" item item-image">
+                <img ng-src="{{livro.imagem}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="item item-body" id="cartTabDefaultPage-list-item-container2">
+                <h1 id="cartTabDefaultPage-heading1" style="color:#000000;text-align:center;">{{ livro.title }}</h1>
+                <div id="cartTabDefaultPage-markdown5" style="text-align:center;" class="show-list-numbers-and-dots">
+                    <p style="color:#000000;">Autor: {{ livro.autor }}</p>
+                </div>
+                <div id="cartTabDefaultPage-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
+                    <p style="color:#000000;font-size:20px;">De: {{ livro.precode }}</p>
+                </div>
+                <div id="cartTabDefaultPage-markdown4" style="text-align:center;" class="show-list-numbers-and-dots">
+                    <p style="color:#000000;font-size:20px;">Por: {{ livro.precopor }}</p>
+                </div>
+            </div>
         </div>
-        <div id="cartTabDefaultPage-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;font-size:20px;">De: 90,00</p>
-        </div>
-        <div id="cartTabDefaultPage-markdown4" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;font-size:20px;">Por: 50,00</p>
-        </div>
-      </div>
-    </div>
-    <div class="list card" id="cartTabDefaultPage-card22">
-      <div class=" item item-image">
-        <img src="img/nemtaoprimos-livro.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
-      </div>
-      <div class="item item-body" id="cartTabDefaultPage-list-item-container3">
-        <h1 id="cartTabDefaultPage-heading2" style="color:#000000;text-align:center;">Heading</h1>
-        <div id="cartTabDefaultPage-markdown6" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;">Autor: Charles França</p>
-        </div>
-        <div id="cartTabDefaultPage-markdown7" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;font-size:20px;">De: 90,00</p>
-        </div>
-        <div id="cartTabDefaultPage-markdown8" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;font-size:20px;">Por: 50,00</p>
-        </div>
-      </div>
-    </div>
-    <div class="list card" id="cartTabDefaultPage-card23">
-      <div class=" item item-image">
-        <img src="img/nemtaoprimos-livro.png" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
-      </div>
-      <div class="item item-body" id="cartTabDefaultPage-list-item-container4">
-        <h1 id="cartTabDefaultPage-heading3" style="color:#000000;text-align:center;">Heading</h1>
-        <div id="cartTabDefaultPage-markdown9" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;">Autor: Charles França</p>
-        </div>
-        <div id="cartTabDefaultPage-markdown10" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;font-size:20px;">De: 90,00</p>
-        </div>
-        <div id="cartTabDefaultPage-markdown11" style="text-align:center;" class="show-list-numbers-and-dots">
-          <p style="color:#000000;font-size:20px;">Por: 50,00</p>
-        </div>
-      </div>
-    </div>
-  </ion-content>
+
+    </ion-content>
 </ion-view>
