@@ -1,3 +1,22 @@
 <ion-view title="Cloud Tab Default Page" id="page4">
-  <ion-content padding="true" class="has-header"></ion-content>
+    <ion-content padding="true" class="has-header">
+        <!--A variavel da direita "livros" é uma variavel existente no controller e que foi repassada ao html pelo escopo da página "$scope"-->
+        <div class="list card" id="cartTabDefaultPage-card21" ng-repeat="livro in livros">
+            <div class=" item item-image">
+                <img ng-src="{{livro.imagem}}" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+            </div>
+            <div class="item item-body" id="cartTabDefaultPage-list-item-container2">
+                <h1 id="cartTabDefaultPage-heading1" style="color:#000000;text-align:center;">{{ livro.title }}</h1>
+                <div id="cartTabDefaultPage-markdown5" style="text-align:center;" class="show-list-numbers-and-dots">
+                    <p style="color:#000000;">Autor: {{ livro.autor }}</p>
+                </div>
+                <div id="cartTabDefaultPage-markdown3" style="text-align:center;" class="show-list-numbers-and-dots">
+                    <p style="color:#000000;font-size:20px;">De: {{ livro.precode }}</p>
+                </div>
+                <div id="cartTabDefaultPage-markdown4" style="text-align:center;" class="show-list-numbers-and-dots">
+                    <p style="color:#000000;font-size:20px;">Por: {{ livro.precopor }}</p>
+                </div>
+            </div>
+        </div>
+    </ion-content>
 </ion-view>
